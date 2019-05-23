@@ -159,7 +159,7 @@ const MailWidget = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="contact" value="contact" />
+          <input type="hidden" name="form-name" value="contact" />
           <CnInput name="name" type="text" placeholder="Name" />
           <CnInput name="email" type="text" placeholder="Email" />
           <CnTextArea name="message" placeholder="Message" />
