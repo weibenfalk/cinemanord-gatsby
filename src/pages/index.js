@@ -5,6 +5,7 @@ import HomeHero from '../components/HomeHero';
 import HomeLayout from '../components/HomeLayout';
 import HomeMenu from '../components/HomeMenu';
 import Quote from '../components/Quote';
+import MailWidget from '../components/MailWidget';
 
 import { GlobalStyle } from '../components/styles/StyledLayout';
 
@@ -21,6 +22,7 @@ const IndexPage = () => (
       <HomeMenu />
       <Quote />
     </HomeLayout>
+    <MailWidget />
     <GlobalStyle />
   </>
 );
