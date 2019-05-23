@@ -153,7 +153,7 @@ const MailWidget = () => {
         <img className="mailWidgetImg" src={envelope} alt="envelope" />
       </div>
       <div className="contentMailWidget">
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" netlify>
           <CnInput name="name" type="text" placeholder="Name" />
           <CnInput name="email" type="text" placeholder="Email" />
           <CnTextArea name="message" placeholder="Message" />
