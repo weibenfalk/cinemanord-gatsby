@@ -22,7 +22,7 @@ const IndexPage = () => (
       <HomeMenu />
       <Quote />
     </HomeLayout>
-    <MailWidget />
+    {/* <MailWidget /> */}
     <GlobalStyle />
   </>
 );

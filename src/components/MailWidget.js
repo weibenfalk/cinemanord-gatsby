@@ -122,34 +122,20 @@ const MailWidget = () => {
         >
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
-            <label>
-              Don’t fill this out:{' '}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
+            Don’t fill this out:{' '}
+            <CnInput name="bot-field" onChange={handleChange} />
           </p>
           <p>
-            <label>
-              Your name:
-              <br />
-              <input type="text" name="name" onChange={handleChange} />
-            </label>
+            <CnInput type="text" name="name" onChange={handleChange} />
           </p>
           <p>
-            <label>
-              Your email:
-              <br />
-              <input type="email" name="email" onChange={handleChange} />
-            </label>
+            <CnInput type="email" name="email" onChange={handleChange} />
           </p>
           <p>
-            <label>
-              Message:
-              <br />
-              <textarea name="message" onChange={handleChange} />
-            </label>
+            <CnTextArea name="message" onChange={handleChange} />
           </p>
           <p>
-            <button type="submit">Send</button>
+            <CnSubmit type="submit">Send email</CnSubmit>
           </p>
         </form>
       </div>
