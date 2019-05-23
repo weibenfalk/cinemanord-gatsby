@@ -95,11 +95,9 @@ const MailWidget = () => {
   };
 
   const handleChange = e => {
-    console.log(formState)
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
+    console.log(formState);
+    const event = e.target;
+    setFormState(prev => ({ ...prev, [event.name]: event.value }));
   };
 
   return (
@@ -118,8 +116,8 @@ const MailWidget = () => {
           name="contact"
           method="post"
           action="/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          // data-netlify="true"
+          // data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
