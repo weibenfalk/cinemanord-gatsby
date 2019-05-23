@@ -116,8 +116,8 @@ const MailWidget = () => {
           name="contact"
           method="post"
           action="/"
-          // data-netlify="true"
-          // data-netlify-honeypot="bot-field"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />

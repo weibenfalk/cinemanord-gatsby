@@ -10,11 +10,11 @@ import { GlobalStyle } from '../components/styles/StyledLayout';
 
 const IndexPage = () => (
   <>
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    {/* <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea name="message" />
-    </form>
+    </form> */}
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <HomeHero />
     <HomeLayout>
