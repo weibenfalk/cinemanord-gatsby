@@ -127,27 +127,30 @@ const MailWidget = () => {
               <input name="bot-field" onChange={handleChange} />
             </label>
           </p>
-
-          <CnInput
-            name="name"
-            type="text"
-            placeholder="Name"
-            onChange={handleChange}
-          />
-          <CnInput
-            name="email"
-            type="text"
-            placeholder="Email"
-            onChange={handleChange}
-          />
-          <CnTextArea
-            name="message"
-            placeholder="Message"
-            onChange={handleChange}
-          />
-          <CnSubmit type="submit" name="submit">
-            Send Email
-          </CnSubmit>
+          <p>
+            <label>
+              Your name:
+              <br />
+              <input type="text" name="name" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your email:
+              <br />
+              <input type="email" name="email" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:
+              <br />
+              <textarea name="message" onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
         </form>
       </div>
     </div>
