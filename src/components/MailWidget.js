@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { navigateTo } from 'gatsby-link';
 
 import envelope from '../images/envelope.svg';
 
@@ -64,81 +65,41 @@ const CnSubmit = styled.button`
   }
 `;
 
-// const StyledMailWidget = styled.div`
-//   position: fixed;
-//   z-index: 10000;
-//   bottom: 50px;
-//   right: 50px;
-//   width: 400px;
-
-//   transition: all 0.3s ease;
-//   transform: translateY(480px);
-
-//   &.visible {
-//     transform: translateY(0px);
-//   }
-
-//   .mailWidgetImg {
-//     width: 50px;
-//     height: auto;
-//     margin-top: 25px;
-//   }
-
-//   .toggleButton {
-//     position: absolute;
-//     right: 0px;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     justify-content: center;
-//     cursor: pointer;
-//     transition: all 0.5s;
-//     outline: none;
-//     width: 80px;
-//     height: 80px;
-
-//     border-radius: 100px;
-//     background: #3023ae; /* Old browsers */
-//     background: -moz-linear-gradient(
-//       top,
-//       #3023ae 0%,
-//       #c86dd7 100%
-//     ); /* FF3.6-15 */
-//     background: -webkit-linear-gradient(
-//       top,
-//       #3023ae 0%,
-//       #c86dd7 100%
-//     ); /* Chrome10-25,Safari5.1-6 */
-//     background: linear-gradient(
-//       to bottom,
-//       #3023ae 0%,
-//       #c86dd7 100%
-//     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3023ae', endColorstr='#c86dd7',GradientType=0 ); /* IE6-9 */
-
-//     :hover {
-//       opacity: 0.8;
-//       transform: scale(1.1);
-//     }
-//   }
-
-//   .contentMailWidget {
-//     position: relative;
-//     top: 70px;
-//     background: #000;
-//     width: 100%;
-//     height: 500px;
-//     margin: 40px 0 0 0;
-//     border-radius: 20px;
-//     padding: 20px;
-//   }
-// `;
-
 const MailWidget = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [formState, setFormState] = useState({});
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&');
+  }
 
   const toggleVisible = () => {
     setIsVisible(!isVisible);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...formState,
+      }),
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error));
+  };
+
+  const handleChange = e => {
+    console.log(formState)
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -156,13 +117,36 @@ const MailWidget = () => {
         <form
           name="contact"
           method="post"
+          action="/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <CnInput name="name" type="text" placeholder="Name" />
-          <CnInput name="email" type="text" placeholder="Email" />
-          <CnTextArea name="message" placeholder="Message" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={handleChange} />
+            </label>
+          </p>
+
+          <CnInput
+            name="name"
+            type="text"
+            placeholder="Name"
+            onChange={handleChange}
+          />
+          <CnInput
+            name="email"
+            type="text"
+            placeholder="Email"
+            onChange={handleChange}
+          />
+          <CnTextArea
+            name="message"
+            placeholder="Message"
+            onChange={handleChange}
+          />
           <CnSubmit type="submit" name="submit">
             Send Email
           </CnSubmit>
