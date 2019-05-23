@@ -18,6 +18,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message" />
+      </form>
       <Hamburger callback={handleOverlayMenu} />
       <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
       <Header />
