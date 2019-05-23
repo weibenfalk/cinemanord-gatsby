@@ -154,6 +154,7 @@ const MailWidget = () => {
       </div>
       <div className="contentMailWidget">
         <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="contact" value="contact" />
           <CnInput name="name" type="text" placeholder="Name" />
           <CnInput name="email" type="text" placeholder="Email" />
           <CnTextArea name="message" placeholder="Message" />
