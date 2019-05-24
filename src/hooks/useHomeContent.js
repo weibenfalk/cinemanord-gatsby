@@ -7,6 +7,9 @@ const useHomeContent = () => {
         home: wordpressPage(wordpress_id: { eq: 7 }) {
           title
           content
+          acf {
+            cinema_citat
+          }
           featured_media {
             localFile {
               childImageSharp {

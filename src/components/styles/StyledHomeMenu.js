@@ -4,24 +4,24 @@ export const StyledMenu = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
 
-  #test-ul {
+  #cinemanord-ul {
     font-family: 'Raleway', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     color: white;
   }
-  #test-ul * {
+  #cinemanord-ul * {
     box-sizing: border-box;
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
     color: white;
   }
-  #test-ul li {
+  #cinemanord-ul li {
     color: white;
     list-style: outside none none;
     overflow: hidden;
   }
-  #test-ul a {
+  #cinemanord-ul a {
     padding: 0.3em 0;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -30,15 +30,15 @@ export const StyledMenu = styled.div`
     margin: 0;
     text-decoration: none;
   }
-  #test-ul a:before,
-  #test-ul a:after {
+  #cinemanord-ul a:before,
+  #cinemanord-ul a:after {
     color: white;
     position: absolute;
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
   }
 
-  #test-ul a:after {
+  #cinemanord-ul a:after {
     color: white;
     padding: 5px 0;
     position: absolute;
@@ -50,19 +50,19 @@ export const StyledMenu = styled.div`
     font-weight: 800;
     cursor: pointer;
   }
-  #test-ul li:hover a,
-  #test-ul .current a {
+  #cinemanord-ul li:hover a,
+  #cinemanord-ul .current a {
     transform: translateY(100%);
     color: white;
   }
 
-  /* #test-ul a {
+  /* #cinemanord-ul a {
     transition: 0.4s;
     color: #fff;
     text-decoration: none;
   }
 
-  #test-ul a:hover {
+  #cinemanord-ul a:hover {
     background-color: #ffffff;
     color: #fff;
     padding: 5px 5px;
@@ -78,7 +78,7 @@ export const StyledMenu = styled.div`
     margin: 5px;
   }
 
-  #test-ul::before {
+  #cinemanord-ul::before {
     content: '';
     position: absolute;
     left: 0px;

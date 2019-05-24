@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledOverlay = styled.div`
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -8,10 +10,14 @@ export const StyledOverlay = styled.div`
   transform: ${props =>
     props.menuOpen ? 'translateX(0%)' : 'translateX(-100%)'};
   z-index: 9999;
-  background: #fff;
+  background: #000;
   left: 0px;
   padding: 20px;
   transition: all 0.3s ease;
+
+  .overlayActive {
+    color: #c86dd7;
+  }
 
   .inner {
     display: flex;
@@ -43,13 +49,14 @@ export const StyledOverlay = styled.div`
       }
 
       a {
-        font-family: 'Teko', Arial, Helvetica, sans-serif;
-        font-size: 2rem;
+        font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        text-decoration: none;
         color: #fff;
         transition: all 0.3s ease;
 
         :hover {
-          color: #d22e26;
+          color: #c86dd7;
         }
       }
     }
@@ -64,6 +71,7 @@ export const StyledOverlay = styled.div`
     height: 30px;
     cursor: pointer;
     transition: all 1s ease;
+    outline: 0;
 
     :hover {
       transform: rotate(180deg);

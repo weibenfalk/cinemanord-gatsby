@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import useHomeMenu from '../hooks/useHomeMenu';
 
-// import WhiteLogo from '../images/tango_logo_white.svg';
-// import CloseButton from '../images/tango_close_button.svg';
+import cnLogo from '../images/cn_logo.png';
+import CloseButton from '../images/x.png';
 
 import { StyledOverlay } from './styles/StyledOverlayMenu';
 
@@ -13,7 +13,9 @@ const OverlayMenu = ({ menuOpen, callback }) => {
   return (
     <StyledOverlay menuOpen={menuOpen}>
       <div className="inner">
-        {/* <img className="whiteLogo" src={WhiteLogo} alt="tango-white-logo" /> */}
+        <Link to="/">
+          <img className="whiteLogo" src={cnLogo} alt="cinemanord-logo" />
+        </Link>
         <ul className="overlayMenu">
           {menu.items.map((item, i) => (
             <li key={i}>
@@ -30,8 +32,7 @@ const OverlayMenu = ({ menuOpen, callback }) => {
           tabIndex="0"
           onKeyDown={callback}
         >
-          Close
-          {/* <img src={CloseButton} alt="tango-close-button" /> */}
+          <img src={CloseButton} alt="cinemanord-close-button" />
         </div>
       </div>
     </StyledOverlay>

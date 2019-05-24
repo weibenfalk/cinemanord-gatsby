@@ -6,7 +6,6 @@ import OverlayMenu from './OverlayMenu';
 import Hamburger from './Hamburger';
 
 import { GlobalStyle } from './styles/StyledLayout';
-import './layout.css';
 import 'bootstrap/dist/css/bootstrap-grid.css';
 
 const Layout = ({ children }) => {

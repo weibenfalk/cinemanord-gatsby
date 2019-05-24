@@ -1,69 +1,15 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { navigateTo } from 'gatsby-link';
 
 import envelope from '../images/envelope.svg';
+import x from '../images/x.png';
 
-const CnInput = styled.input`
-  background: #fff;
-  border-radius: 20px;
-  width: 100%;
-  height: 40px;
-  color: #000;
-  padding: 10px;
-  margin-bottom: 20px;
-  outline: none;
-
-  ::placeholder {
-    color: grey;
-  }
-`;
-
-const CnTextArea = styled.textarea`
-  background: #fff;
-  border-radius: 20px;
-  width: 100%;
-  height: 150px;
-  color: #000;
-  padding: 10px;
-  margin-bottom: 20px;
-  outline: none;
-
-  ::placeholder {
-    color: grey;
-  }
-`;
-
-const CnSubmit = styled.button`
-  border-radius: 50px;
-  border: 0;
-  width: 100%;
-  height: 60px;
-  color: #fff;
-  font-weight: 800;
-  padding: 10px;
-  margin-bottom: 20px;
-  outline: none;
-  cursor: pointer;
-  background: #3023ae; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #3023ae 0%,
-    #c86dd7 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #3023ae 0%,
-    #c86dd7 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #3023ae 0%, #c86dd7 100%);
-  transition: all 1s ease;
-
-  :hover {
-    opacity: 0.8;
-    transform: scale(1.02);
-  }
-`;
+import {
+  StyledMailWidget,
+  CnInput,
+  CnTextArea,
+  CnSubmit,
+} from './styles/StyledMailWidget';
 
 const MailWidget = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -95,13 +41,12 @@ const MailWidget = () => {
   };
 
   const handleChange = e => {
-    console.log(formState);
     const event = e.target;
     setFormState(prev => ({ ...prev, [event.name]: event.value }));
   };
 
   return (
-    <div className={isVisible ? 'mailWidget visible' : 'mailWidget'}>
+    <StyledMailWidget className={isVisible ? 'visible' : ''}>
       <div
         className="toggleButton"
         onClick={toggleVisible}
@@ -109,7 +54,11 @@ const MailWidget = () => {
         tabIndex="0"
         role="button"
       >
-        <img className="mailWidgetImg" src={envelope} alt="envelope" />
+        <img
+          className={isVisible ? 'mailWidgetImg small' : 'mailWidgetImg'}
+          src={isVisible ? x : envelope}
+          alt="envelope"
+        />
       </div>
       <div className="contentMailWidget">
         <form
@@ -126,20 +75,34 @@ const MailWidget = () => {
             <CnInput name="bot-field" onChange={handleChange} />
           </p>
           <p>
-            <CnInput type="text" name="name" onChange={handleChange} />
+            <CnInput
+              type="text"
+              name="name"
+              onChange={handleChange}
+              placeholder="First and Last Name"
+            />
           </p>
           <p>
-            <CnInput type="email" name="email" onChange={handleChange} />
+            <CnInput
+              type="email"
+              name="email"
+              onChange={handleChange}
+              placeholder="E-mail Adress"
+            />
           </p>
           <p>
-            <CnTextArea name="message" onChange={handleChange} />
+            <CnTextArea
+              name="message"
+              onChange={handleChange}
+              placeholder="Your Message"
+            />
           </p>
           <p>
             <CnSubmit type="submit">Send email</CnSubmit>
           </p>
         </form>
       </div>
-    </div>
+    </StyledMailWidget>
   );
 };
 

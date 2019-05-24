@@ -9,7 +9,7 @@ const HomeMenu = () => {
 
   return (
     <StyledMenu>
-      <ul id="test-ul">
+      <ul id="cinemanord-ul">
         {menu.items.map(item => (
           <li key={item.wordpress_id}>
             <Link data-hover={item.title} to={item.url}>

@@ -1,21 +1,33 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import {
+  HomeLayoutWrapper,
+  HomeOverlayWrapper,
+} from './styles/StyledHomeLayout';
+
+import OverlayMenu from './OverlayMenu';
+import Hamburger from './Hamburger';
 
 import cnLogo from '../images/cn_logo.png';
 
-const HomeLayoutWrapper = styled.div`
-  z-index: 10;
-  color: white;
-  position: absolute;
-  bottom: 15%;
-  left: 10%;
-`;
+const HomeLayout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-const HomeLayout = ({ children }) => (
-  <HomeLayoutWrapper>
-    <img src={cnLogo} alt="cnLogo" />
-    {children}
-  </HomeLayoutWrapper>
-);
+  const handleOverlayMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  return (
+    <>
+      <HomeOverlayWrapper>
+        <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
+      </HomeOverlayWrapper>
+
+      <Hamburger callback={handleOverlayMenu} />
+      <HomeLayoutWrapper>
+        <img src={cnLogo} alt="cnLogo" />
+        {children}
+      </HomeLayoutWrapper>
+    </>
+  );
+};
 
 export default HomeLayout;
