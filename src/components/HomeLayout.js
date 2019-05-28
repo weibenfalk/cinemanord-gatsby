@@ -7,7 +7,7 @@ import {
 import OverlayMenu from './OverlayMenu';
 import Hamburger from './Hamburger';
 
-import cnLogo from '../images/cn_logo.png';
+import cnLogo from '../images/cn-logo.png';
 
 const HomeLayout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);

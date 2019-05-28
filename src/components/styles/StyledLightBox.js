@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledLightBox = styled.div`
   background: rgb(0, 0, 0, 0.9);
+  padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,16 +15,26 @@ export const StyledLightBox = styled.div`
   flex-direction: column;
 
   .text-wrapper {
-    width: 50vw;
+    width: 80vw;
     background: #000;
     padding: 40px;
+
+    @media (min-width: 992px) {
+      width: 50vw;
+      height: calc(50vw / 16 * 9);
+    }
   }
 
   .player-wrapper {
     position: relative;
-    width: 50vw;
-    height: calc(50vw / 16 * 9);
+    width: 80vw;
+    height: calc(80vw / 16 * 9);
     margin: 0 0 40px 0;
+
+    @media (min-width: 992px) {
+      width: 50vw;
+      height: calc(50vw / 16 * 9);
+    }
 
     :after {
       content: '';
@@ -46,5 +57,10 @@ export const StyledLightBox = styled.div`
     -webkit-text-fill-color: transparent;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
     font-weight: 400;
+    font-size: 1.6rem;
+
+    @media (min-width: 992px) {
+      font-size: 2.2rem;
+    }
   }
 `;

@@ -3,7 +3,7 @@ import React from 'react';
 
 import PageMenu from './PageMenu';
 
-import cnLogo from '../images/cn_logo.png';
+import cnLogo from '../images/cn-logo.png';
 
 import { StyledHeader } from './styles/StyledHeader';
 
