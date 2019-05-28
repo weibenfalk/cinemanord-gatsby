@@ -1,14 +1,24 @@
 import styled from 'styled-components';
 
 export const StyledMenu = styled.div`
-  font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  display: none;
+
+  @media (min-width: 992px) {
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 1rem;
+  }
 
   #cinemanord-ul {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     color: white;
+    margin-bottom: 0;
   }
   #cinemanord-ul * {
     box-sizing: border-box;
@@ -20,6 +30,8 @@ export const StyledMenu = styled.div`
     color: white;
     list-style: outside none none;
     overflow: hidden;
+    margin: 0;
+    max-width: 200px;
   }
   #cinemanord-ul a {
     padding: 0.3em 0;
@@ -55,19 +67,6 @@ export const StyledMenu = styled.div`
     transform: translateY(100%);
     color: white;
   }
-
-  /* #cinemanord-ul a {
-    transition: 0.4s;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  #cinemanord-ul a:hover {
-    background-color: #ffffff;
-    color: #fff;
-    padding: 5px 5px;
-    border-radius: 20px;
-  } */
 
   /* reset defaults */
   ul {

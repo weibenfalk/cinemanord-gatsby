@@ -9,9 +9,16 @@ export const StyledMailWidget = styled.div`
   transition: all 0.3s ease;
   transform: translateY(480px);
 
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    right: 0;
+  }
+
   .toggleButton {
     position: absolute;
-    right: 0px;
+    right: 40px;
     display: flex;
     align-items: center;
     flex-direction: column;

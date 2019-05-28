@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledHamburger = styled.div`
   position: absolute;
   right: 40px;
-  top: 30px;
+  top: 31px;
   z-index: 200;
   cursor: pointer;
   transition: all 0.3s;

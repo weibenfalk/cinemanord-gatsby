@@ -55,6 +55,10 @@ module.exports = {
             family: 'Quicksand',
             variants: ['200', '400', '500', '600', '700'],
           },
+          {
+            family: 'Glegoo',
+            variants: ['200', '400', '500', '600', '700'],
+          },
         ],
       },
     },
