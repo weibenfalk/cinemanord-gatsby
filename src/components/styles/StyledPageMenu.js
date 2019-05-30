@@ -9,6 +9,10 @@ export const StyledPageMenu = styled.nav`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  .active-menu {
+    color: #6ed4bc;
+  }
+
   .nav-active {
     color: #d22e26;
   }

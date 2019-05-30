@@ -14,6 +14,7 @@ import {
 const MailWidget = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [formState, setFormState] = useState({});
+  const [formSent, setFormSent] = useState(false);
 
   function encode(data) {
     return Object.keys(data)
@@ -36,7 +37,8 @@ const MailWidget = () => {
         ...formState,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      // .then(() => navigateTo(form.getAttribute('action')))
+      .then(setFormSent(true))
       .catch(error => alert(error));
   };
 
@@ -61,46 +63,50 @@ const MailWidget = () => {
         />
       </div>
       <div className="contentMailWidget">
-        <form
-          name="contact"
-          method="post"
-          action="/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            Don’t fill this out:{' '}
-            <CnInput name="bot-field" onChange={handleChange} />
-          </p>
-          <p>
-            <CnInput
-              type="text"
-              name="name"
-              onChange={handleChange}
-              placeholder="First and Last Name"
-            />
-          </p>
-          <p>
-            <CnInput
-              type="email"
-              name="email"
-              onChange={handleChange}
-              placeholder="E-mail Adress"
-            />
-          </p>
-          <p>
-            <CnTextArea
-              name="message"
-              onChange={handleChange}
-              placeholder="Your Message"
-            />
-          </p>
-          <p>
-            <CnSubmit type="submit">Send email</CnSubmit>
-          </p>
-        </form>
+        {!formSent ? (
+          <form
+            name="contact"
+            method="post"
+            action="/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              Don’t fill this out:{' '}
+              <CnInput name="bot-field" onChange={handleChange} />
+            </p>
+            <p>
+              <CnInput
+                type="text"
+                name="name"
+                onChange={handleChange}
+                placeholder="First and Last Name"
+              />
+            </p>
+            <p>
+              <CnInput
+                type="email"
+                name="email"
+                onChange={handleChange}
+                placeholder="E-mail Adress"
+              />
+            </p>
+            <p>
+              <CnTextArea
+                name="message"
+                onChange={handleChange}
+                placeholder="Your Message"
+              />
+            </p>
+            <p>
+              <CnSubmit type="submit">Send email</CnSubmit>
+            </p>
+          </form>
+        ) : (
+          <p>Thank you for emailing us.</p>
+        )}
       </div>
     </StyledMailWidget>
   );

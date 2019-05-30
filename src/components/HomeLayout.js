@@ -27,7 +27,6 @@ const HomeLayout = ({ children }) => {
         <img src={cnLogo} alt="cnLogo" />
         {children}
       </HomeLayoutWrapper>
-      <Social />
     </>
   );
 };

@@ -12,7 +12,11 @@ const PageMenu = () => {
       <ul id="cinemanord-ul">
         {menu.items.map(item => (
           <li key={item.wordpress_id}>
-            <Link data-hover={item.title} to={item.url}>
+            <Link
+              data-hover={item.title}
+              to={item.url}
+              activeClassName="active-menu"
+            >
               {item.title}
             </Link>
           </li>
