@@ -30,18 +30,18 @@ export const StyledMailWidget = styled.div`
     height: 60px;
 
     border-radius: 100px;
-    background: #3023ae; /* Old browsers */
+    background: #307853; /* Old browsers */
     background: -moz-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* FF3.6-15 */
     background: -webkit-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #3023ae 0%, #c86dd7 100%);
+    background: linear-gradient(to bottom, #307853 0%, #6ed4bc 100%);
   }
 
   &.visible {
@@ -124,18 +124,18 @@ export const CnSubmit = styled.button`
   margin-bottom: 20px;
   outline: none;
   cursor: pointer;
-  background: #3023ae; /* Old browsers */
+  background: #307853; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #3023ae 0%,
-    #c86dd7 100%
+    #307853 0%,
+    #6ed4bc 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #3023ae 0%,
-    #c86dd7 100%
+    #307853 0%,
+    #6ed4bc 100%
   ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #3023ae 0%, #c86dd7 100%);
+  background: linear-gradient(to bottom, #307853 0%, #6ed4bc 100%);
   transition: all 1s ease;
 
   :hover {

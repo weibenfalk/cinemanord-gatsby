@@ -84,22 +84,22 @@ export const StyledMenu = styled.div`
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #3023ae; /* Old browsers */
+    background: #307853; /* Old browsers */
     background: -moz-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* FF3.6-15 */
     background: -webkit-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to bottom,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3023ae', endColorstr='#c86dd7',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#307853', endColorstr='#6ed4bc',GradientType=0 ); /* IE6-9 */
   }
 `;

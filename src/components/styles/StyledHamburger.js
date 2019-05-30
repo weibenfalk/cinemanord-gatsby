@@ -24,17 +24,17 @@ export const StyledHamburger = styled.div`
     margin: 7px 0;
     border-radius: 20px;
     transition: 0.4s;
-    background: #3023ae; /* Old browsers */
+    background: #307853; /* Old browsers */
     background: -moz-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* FF3.6-15 */
     background: -webkit-linear-gradient(
       top,
-      #3023ae 0%,
-      #c86dd7 100%
+      #307853 0%,
+      #6ed4bc 100%
     ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #3023ae 0%, #c86dd7 100%);
+    background: linear-gradient(to right, #307853 0%, #6ed4bc 100%);
   }
 `;

@@ -16,7 +16,7 @@ export const StyledOverlay = styled.div`
   transition: all 0.3s ease;
 
   .overlayActive {
-    color: #c86dd7;
+    color: #6ed4bc;
   }
 
   .inner {
@@ -45,7 +45,7 @@ export const StyledOverlay = styled.div`
       }
 
       li.overlayActive {
-        color: #d22e26;
+        color: #6ed4bc;
       }
 
       a {
@@ -56,7 +56,7 @@ export const StyledOverlay = styled.div`
         transition: all 0.3s ease;
 
         :hover {
-          color: #c86dd7;
+          color: #6ed4bc;
         }
       }
     }

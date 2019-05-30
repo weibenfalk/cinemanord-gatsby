@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './header';
 import OverlayMenu from './OverlayMenu';
 import Hamburger from './Hamburger';
+import Social from './Social';
 
 import { GlobalStyle } from './styles/StyledLayout';
 import 'bootstrap/dist/css/bootstrap-grid.css';
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
           {children}
         </main>
       </div>
+      <Social />
       <GlobalStyle />
     </>
   );

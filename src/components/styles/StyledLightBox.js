@@ -43,7 +43,7 @@ export const StyledLightBox = styled.div`
       left: -2px;
       right: -2px;
       bottom: -2px;
-      background: linear-gradient(235deg, #3023ae, #c86dd7);
+      background: linear-gradient(235deg, #307853, #6ed4bc);
       z-index: -2;
       filter: blur(20px);
       opacity: 0.3;
@@ -51,8 +51,8 @@ export const StyledLightBox = styled.div`
   }
 
   .header {
-    color: linear-gradient(45deg, #3023ae, #c86dd7);
-    background: linear-gradient(#3023ae, #c86dd7);
+    color: linear-gradient(45deg, #307853, #6ed4bc);
+    background: linear-gradient(#307853, #6ed4bc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;

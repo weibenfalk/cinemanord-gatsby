@@ -6,6 +6,7 @@ import {
 
 import OverlayMenu from './OverlayMenu';
 import Hamburger from './Hamburger';
+import Social from './Social';
 
 import cnLogo from '../images/cn-logo.png';
 
@@ -26,6 +27,7 @@ const HomeLayout = ({ children }) => {
         <img src={cnLogo} alt="cnLogo" />
         {children}
       </HomeLayoutWrapper>
+      <Social />
     </>
   );
 };

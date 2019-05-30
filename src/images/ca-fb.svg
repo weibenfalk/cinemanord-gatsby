@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="448px" height="448px" viewBox="0 0 448 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#307853" offset="0%"></stop>
+            <stop stop-color="#65C7AD" offset="100%"></stop>
+        </linearGradient>
+        <path d="M448,24.7 L448,423.2 C448,436.9 436.9,447.9 423.3,447.9 L309.1,447.9 L309.1,274.5 L367.3,274.5 L376,206.9 L309,206.9 L309,163.7 C309,144.1 314.4,130.8 342.5,130.8 L378.3,130.8 L378.3,70.3 C372.1,69.5 350.9,67.6 326.1,67.6 C274.5,67.6 239.1,99.1 239.1,157 L239.1,206.9 L180.7,206.9 L180.7,274.5 L239.1,274.5 L239.1,448 L24.7,448 C11.1,448 0,436.9 0,423.3 L0,24.7 C0,11.1 11.1,0 24.7,0 L423.2,0 C436.9,0 448,11.1 448,24.7 Z" id="path-2"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <use id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+    </g>
+</svg>

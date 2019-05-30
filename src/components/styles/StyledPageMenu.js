@@ -43,7 +43,7 @@ export const StyledPageMenu = styled.nav`
 
       &:before {
         border-radius: inherit;
-        background-image: linear-gradient(45deg, #3023ae, #c86dd7);
+        background-image: linear-gradient(45deg, #307853, #6ed4bc);
         content: '';
         display: block;
         height: 100%;
@@ -77,7 +77,7 @@ export const StyledPageMenu = styled.nav`
   }
 
   /* ul li a:hover {
-    background: linear-gradient(45deg, #3023ae, #c86dd7);
+    background: linear-gradient(45deg, #307853, #6ed4bc);
   } */
 
   ul ul {
