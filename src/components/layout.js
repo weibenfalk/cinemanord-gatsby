@@ -12,10 +12,7 @@ import { ThemeContext } from './ThemeWrapper';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [nightMode] = useContext(ThemeContext);
-
-  console.log(nightMode);
 
   const handleOverlayMenu = () => {
     setMenuOpen(!menuOpen);
