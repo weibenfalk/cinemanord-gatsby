@@ -8,6 +8,16 @@ export const GlobalStyle = createGlobalStyle`
   color: #fff;
 }
 
+.bodyWrapper {
+  background: #fff;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+.dark {
+  background: #000;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -16,7 +26,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background: ${props => (props.nightMode ? '#000' : '#fff')};
+  background: #000;
   margin: 0;
   padding: 0;
   color: ${props => (props.nightMode ? '#fff' : '#222')};

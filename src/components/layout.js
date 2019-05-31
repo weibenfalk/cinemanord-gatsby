@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
+    <div className={nightMode ? 'bodyWrapper dark' : 'bodyWrapper'}>
       <Hamburger callback={handleOverlayMenu} />
       <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
       <Header />
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       </div>
       <Social />
       <GlobalStyle nightMode={nightMode} />
-    </>
+    </div>
   );
 };
 
