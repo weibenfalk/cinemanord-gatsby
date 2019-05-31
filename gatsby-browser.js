@@ -7,6 +7,7 @@
 // ES6 way
 import React from 'react';
 import MailWidgetWrapper from './src/components/MailWidgetWrapper';
+import ThemeWrapper from './src/components/ThemeWrapper';
 
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -17,7 +18,9 @@ export const onClientEntry = () => {
 };
 
 export const wrapPageElement = ({ element, props }) => (
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
   <MailWidgetWrapper {...props}>{element}</MailWidgetWrapper>
+);
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeWrapper>{element}</ThemeWrapper>
 );

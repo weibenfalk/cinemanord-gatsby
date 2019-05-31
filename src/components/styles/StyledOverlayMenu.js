@@ -11,7 +11,8 @@ export const StyledOverlay = styled.div`
     props.menuOpen ? 'translateX(0%)' : 'translateX(-100%)'};
   z-index: 9999;
   background: #000;
-  left: 0px;
+  left: 0;
+  top: 0;
   padding: 20px;
   transition: all 0.3s ease;
 

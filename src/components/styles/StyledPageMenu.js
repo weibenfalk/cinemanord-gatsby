@@ -34,6 +34,7 @@ export const StyledPageMenu = styled.nav`
     position: relative; /* this is needed in order to position sub menus */
 
     a {
+      color: ${props => (props.nightMode ? '#fff' : '#000')};
       padding: 0 0 0 10px;
       transition: all 0.2s ease;
       text-decoration: none;

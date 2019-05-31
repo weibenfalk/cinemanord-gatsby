@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import useHomeMenu from '../hooks/useHomeMenu';
 
 import { StyledPageMenu } from './styles/StyledPageMenu';
+import { ThemeContext } from './ThemeWrapper';
 
 const PageMenu = () => {
   const menu = useHomeMenu();
+  const [nightMode] = useContext(ThemeContext);
 
   return (
-    <StyledPageMenu>
+    <StyledPageMenu nightMode={nightMode}>
       <ul id="cinemanord-ul">
         {menu.items.map(item => (
           <li key={item.wordpress_id}>

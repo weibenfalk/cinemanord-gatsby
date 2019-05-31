@@ -19,6 +19,12 @@ export const StyledLightBox = styled.div`
     background: #000;
     padding: 40px;
 
+    p,
+    em,
+    strong {
+      color: #fff;
+    }
+
     @media (min-width: 992px) {
       width: 50vw;
       height: calc(50vw / 16 * 9);

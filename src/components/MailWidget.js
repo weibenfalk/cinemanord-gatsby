@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { navigateTo } from 'gatsby-link';
 
 import envelope from '../images/envelope.svg';
 import x from '../images/x.png';
+
+import { ThemeContext } from './ThemeWrapper';
 
 import {
   StyledMailWidget,
@@ -15,6 +17,8 @@ const MailWidget = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [formState, setFormState] = useState({});
   const [formSent, setFormSent] = useState(false);
+
+  const [nightMode] = useContext(ThemeContext);
 
   function encode(data) {
     return Object.keys(data)
@@ -48,7 +52,10 @@ const MailWidget = () => {
   };
 
   return (
-    <StyledMailWidget className={isVisible ? 'visible' : ''}>
+    <StyledMailWidget
+      nightMode={nightMode}
+      className={isVisible ? 'visible' : ''}
+    >
       <div
         className="toggleButton"
         onClick={toggleVisible}
@@ -101,7 +108,9 @@ const MailWidget = () => {
               />
             </p>
             <p>
-              <CnSubmit type="submit">Send email</CnSubmit>
+              <CnSubmit nightMode={nightMode} type="submit">
+                Send email
+              </CnSubmit>
             </p>
           </form>
         ) : (

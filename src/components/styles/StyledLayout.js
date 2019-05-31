@@ -16,12 +16,13 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background: #000;
+  background: ${props => (props.nightMode ? '#000' : '#fff')};
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: ${props => (props.nightMode ? '#fff' : '#222')};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all 0.5s;
 }
 article,
 aside,
@@ -391,7 +392,7 @@ dd {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-p {
+p, em, strong {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -403,7 +404,11 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.8rem;
-  color: #ddd;
+  
+}
+
+p, em, strong {
+color: ${props => (props.nightMode ? '#fff' : '#222')};
 }
 figure {
   margin-left: 0;

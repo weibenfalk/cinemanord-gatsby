@@ -28,7 +28,6 @@ export const StyledMailWidget = styled.div`
     outline: none;
     width: 60px;
     height: 60px;
-
     border-radius: 100px;
     background: #307853; /* Old browsers */
     background: -moz-linear-gradient(
@@ -42,6 +41,11 @@ export const StyledMailWidget = styled.div`
       #6ed4bc 100%
     ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #307853 0%, #6ed4bc 100%);
+
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &.visible {
@@ -55,6 +59,16 @@ export const StyledMailWidget = styled.div`
 
     &.small {
       width: 20px;
+
+      @media (max-width: 768px) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 15px;
+      height: 15px;
     }
   }
 
@@ -68,10 +82,14 @@ export const StyledMailWidget = styled.div`
     top: 70px;
     background: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 500px;
+    height: 480px;
     margin: 40px 0 0 0;
     border-radius: 20px;
     padding: 20px;
+
+    p {
+      color: #fff;
+    }
   }
 `;
 

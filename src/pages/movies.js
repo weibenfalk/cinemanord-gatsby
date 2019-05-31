@@ -9,8 +9,6 @@ const MoviePage = ({ data }) => {
     allWordpressWpMovies: { edges: movies },
   } = data;
 
-  console.log(movies);
-
   return (
     <Layout>
       <div className="container-fluid">

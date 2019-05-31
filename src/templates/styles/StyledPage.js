@@ -15,11 +15,4 @@ export const PageContent = styled.article`
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
-
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    color: #ddd;
-  }
 `;

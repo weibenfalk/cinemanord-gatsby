@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import {
-  HomeLayoutWrapper,
-  HomeOverlayWrapper,
-} from './styles/StyledHomeLayout';
+import { HomeLayoutWrapper } from './styles/StyledHomeLayout';
 
 import OverlayMenu from './OverlayMenu';
 import Hamburger from './Hamburger';
-import Social from './Social';
 
 import cnLogo from '../images/cn-logo.png';
 
@@ -18,10 +14,7 @@ const HomeLayout = ({ children }) => {
   };
   return (
     <>
-      <HomeOverlayWrapper>
-        <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
-      </HomeOverlayWrapper>
-
+      <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
       <Hamburger callback={handleOverlayMenu} />
       <HomeLayoutWrapper>
         <img src={cnLogo} alt="cnLogo" />
