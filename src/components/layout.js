@@ -8,11 +8,11 @@ import Social from './Social';
 
 import { GlobalStyle } from './styles/StyledLayout';
 
-// import { ThemeContext } from './ThemeWrapper';
+import { ThemeContext } from './ThemeWrapper';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [nightMode] = useContext(ThemeContext);
+  const [nightMode] = useContext(ThemeContext);
 
   const handleOverlayMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         </main>
       </div>
       <Social />
-      <GlobalStyle />
+      <GlobalStyle nightMode={nightMode} />
     </>
   );
 };
