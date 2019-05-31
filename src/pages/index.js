@@ -4,7 +4,6 @@ import SEO from '../components/seo';
 import HomeHero from '../components/HomeHero';
 import HomeLayout from '../components/HomeLayout';
 import HomeMenu from '../components/HomeMenu';
-import Quote from '../components/Quote';
 
 import { GlobalStyle } from '../components/styles/StyledLayout';
 
@@ -19,9 +18,7 @@ const IndexPage = () => (
     <HomeHero />
     <HomeLayout>
       <HomeMenu />
-      {/* <Quote /> */}
     </HomeLayout>
-    {/* <MailWidget /> */}
     <GlobalStyle />
   </>
 );
