@@ -13,6 +13,7 @@ const PageTemplate = ({ data }) => (
         <PageContent className="col">
           {data.currentPage.featured_media ? (
             <Img
+              style={{ marginBottom: '20px' }}
               fluid={
                 data.currentPage.featured_media.localFile.childImageSharp.fluid
               }

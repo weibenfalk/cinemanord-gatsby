@@ -8,14 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   color: #fff;
 }
 
-.bodyWrapper {
-  background: #fff;
-  height: 100vh;
-  transition: all 0.5s;
-}
-
-.dark {
-  background: #000;
+.container, #main, #primary {
+  height: 100% !important;
+  min-height: 100% !important;
 }
 
 html {
@@ -26,13 +21,14 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background: #000;
+  background: ${props => (props.nightMode ? '#000' : '#fff')};
   margin: 0;
   padding: 0;
   color: ${props => (props.nightMode ? '#fff' : '#222')};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 0.5s;
+  /* Need to have below check for the flickering in white on transition because of default color white on body */
+  transition: ${props => (props.nightMode ? 'none' : 'all 0.5s')};
 }
 article,
 aside,
