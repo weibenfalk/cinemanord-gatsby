@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import useHomeMenu from '../hooks/useHomeMenu';
 
+import { StyledOverlay } from './styles/StyledOverlayMenu';
+
 import cnLogo from '../images/cn_logo.png';
 import CloseButton from '../images/x.png';
-
-import { StyledOverlay } from './styles/StyledOverlayMenu';
 
 const OverlayMenu = ({ menuOpen, callback }) => {
   const menu = useHomeMenu();
@@ -17,8 +17,8 @@ const OverlayMenu = ({ menuOpen, callback }) => {
           <img className="whiteLogo" src={cnLogo} alt="cinemanord-logo" />
         </Link>
         <ul className="overlayMenu">
-          {menu.items.map((item, i) => (
-            <li key={i}>
+          {menu.items.map(item => (
+            <li key={item.wordpress_id}>
               <Link to={item.url} activeClassName="overlayActive">
                 {item.title}
               </Link>

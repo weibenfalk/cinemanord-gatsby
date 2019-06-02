@@ -9,14 +9,14 @@ import {
 } from './styles/StyledMovieCard';
 
 const MovieCard = ({ image, link, title, content }) => {
-  const [isLightBox, setIsLightBox] = useState(false);
+  const [showLightBox, setshowLightBox] = useState(false);
 
-  const handleLightBox = () => setIsLightBox(!isLightBox);
+  const handleLightBox = () => setshowLightBox(!showLightBox);
 
   return (
     <>
       <LightBox
-        show={isLightBox}
+        show={showLightBox}
         callback={handleLightBox}
         link={link}
         title={title}
@@ -24,13 +24,11 @@ const MovieCard = ({ image, link, title, content }) => {
       />
       <MovieImage onClick={handleLightBox}>
         <StyledImg fluid={image} />
-        {/* <Link to={link}> */}
         <MovieImageTextWrapper>
           <div className="pWrapper">
             <MovieImageText>{title}</MovieImageText>
           </div>
         </MovieImageTextWrapper>
-        {/* </Link> */}
       </MovieImage>
     </>
   );

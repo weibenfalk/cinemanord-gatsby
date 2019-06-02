@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { ThemeContext } from './ThemeWrapper';
 
 import Header from './header';
 import OverlayMenu from './OverlayMenu';
@@ -7,8 +8,6 @@ import Hamburger from './Hamburger';
 import Social from './Social';
 
 import { GlobalStyle } from './styles/StyledLayout';
-
-import { ThemeContext } from './ThemeWrapper';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);

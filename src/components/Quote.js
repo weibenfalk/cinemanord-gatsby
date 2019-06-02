@@ -1,6 +1,6 @@
 import React from 'react';
-import { QuoteWrapper } from './styles/StyledQuote';
 import useHomeContent from '../hooks/useHomeContent';
+import { QuoteWrapper } from './styles/StyledQuote';
 
 import quoteImg from '../images/quote_sign.png';
 

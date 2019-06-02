@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import useHomeMenu from '../hooks/useHomeMenu';
+import { ThemeContext } from './ThemeWrapper';
 
 import { StyledPageMenu } from './styles/StyledPageMenu';
-import { ThemeContext } from './ThemeWrapper';
 
 const PageMenu = () => {
   const menu = useHomeMenu();

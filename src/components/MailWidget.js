@@ -33,17 +33,19 @@ const MailWidget = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...formState,
-      }),
-    })
-      // .then(() => navigateTo(form.getAttribute('action')))
-      .then(setFormSent(true))
-      .catch(error => alert(error));
+    if (formState.name && formState.email && formState.message) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...formState,
+        }),
+      })
+        // .then(() => navigateTo(form.getAttribute('action')))
+        .then(setFormSent(true))
+        .catch(error => alert(error));
+    }
   };
 
   const handleChange = e => {

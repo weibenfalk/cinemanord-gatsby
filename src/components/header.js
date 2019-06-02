@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
+import { ThemeContext } from './ThemeWrapper';
 
 import PageMenu from './PageMenu';
 
 import cnLogo from '../images/cn-logo.png';
 import cnLogoBlack from '../images/cn-logo-black.png';
 
-import { ThemeContext } from './ThemeWrapper';
 import { StyledHeader } from './styles/StyledHeader';
 
 const Header = () => {

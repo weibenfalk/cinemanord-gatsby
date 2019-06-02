@@ -20,7 +20,7 @@ const ModeButton = () => {
           className="toggle"
           id="cb1"
           type="checkbox"
-          onClick={toggleNightMode}
+          onChange={toggleNightMode}
           checked={!nightMode}
         />
         <label className="toggle-button" htmlFor="cb1" />
